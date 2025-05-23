@@ -1,0 +1,31 @@
+/* resources/css/app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles personnalisés */
+.rating-input {
+    @apply hidden;
+}
+
+.rating-input + label {
+    @apply cursor-pointer;
+}
+
+.rating-input:checked + label {
+    @apply text-yellow-400;
+}
+
+/* Animation pour les alertes */
+.alert-enter {
+    @apply opacity-0 transform -translate-y-2;
+}
+.alert-enter-active {
+    @apply opacity-100 transform translate-y-0 transition-all duration-300;
+}
+.alert-exit {
+    @apply opacity-100;
+}
+.alert-exit-active {
+    @apply opacity-0 transition-opacity duration-300;
+}
